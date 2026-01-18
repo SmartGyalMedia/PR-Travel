@@ -1,0 +1,428 @@
+
+
+/* --- FONT IMPORT from Google --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+
+/* --- CSS VARIABLES for aesthetics --- */
+
+:root {
+    /* Fonts */
+    --font-headline: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Base Colors (90%) */
+    --color-text: #333333; /* Dark Gray (for text) */
+    --color-white: #FFFFFF; /* White (for backgrounds) */
+    --color-light-gray: #f4f4f4; /* Light Gray (for some sections) */
+
+    /* Accent Colors (10% - Vibrant Colors) */
+    --color-blue-deep: #005073;   /* A deep, elegant ocean blue */
+    --color-red-warm: #C73E1D;   /* A warm, energetic red */
+    --color-warm-white: #fdfaf5; /* A very light, sandy/warm off-white */
+}
+
+
+/* --- BASIC PAGE RESET --- */
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --- BODY & FONT STYLING--- */
+
+body {
+    font-family: var(--font-body); 
+    color: var(--color-text);      
+    line-height: 1.6;             
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline); 
+    font-weight: 700;                 
+    margin-bottom: 10px;              
+}
+
+/* --- HEADER & NAVIGATION BAR --- */
+
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 40px; 
+    background-color: var(--color-white); 
+    border-bottom: 1px solid var(--color-light-gray); 
+}
+
+header .logo a {
+    font-family: var(--font-headline); 
+    font-size: 1.5rem; 
+    color: var(--color-blue-deep);   
+    text-decoration: none;         
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none; 
+    display: flex;    
+}
+
+nav li {
+    margin-left: 30px; 
+}
+
+nav a {
+    font-family: var(--font-headline); 
+    text-decoration: none;           
+    color: var(--color-text);       
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: var(--color-red-warm); 
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    padding: 30px 40px; 
+    margin-top: 40px; 
+    background-color: var(--color-blue-deep); 
+    color: var(--color-white); 
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* --- FOOTER CONTACT LINK --- */
+
+.footer-link a {
+    color: var(--color-white);    
+    font-weight: 700;            
+    text-decoration: none;       
+    font-size: 1rem;             
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+.footer-link {
+    margin-bottom: 10px; 
+}
+
+/* --- HERO SECTIONS (MAIN & SMALL) --- */
+
+.hero {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../images/hero-bg.jpg);
+    background-size: cover;     
+    background-position: center; 
+    padding: 150px 40px; 
+    text-align: center;
+    color: var(--color-white); 
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    font-family: var(--font-headline); 
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none; 
+    color: var(--color-white);
+    background-color: var(--color-blue-deep);
+    padding: 12px 24px; 
+    border-radius: 5px;   
+}
+
+.cta-button:hover {
+    background-color: var(--color-red-warm); 
+}
+
+.hero-small {
+    padding: 60px 40px; 
+    background-color: var(--color-blue-deep);
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+}
+
+.hero-small h1 {
+    font-size: 2.5rem; 
+}
+
+
+/* --- SPOTIFY PLAYERS --- */
+
+.hero iframe {
+    position: absolute; 
+    bottom: 20px;       
+    left: 20px;         
+    width: 300px !important;  
+    height: 80px !important; 
+    margin: 0; 
+}
+
+.hero-small iframe {
+    position: absolute; 
+    bottom: 20px;      
+    left: 20px;        
+    width: 300px !important;  
+    height: 80px !important; 
+    margin: 0; 
+}
+
+.content-section iframe {
+    width: 100%;           
+    max-width: 700px;      
+    margin-top: 20px;     
+    height: 352px !important; 
+}
+
+
+/* --- CONTENT & LAYOUT COMPONENTS --- */
+
+.content-section {
+    margin: 40px 0; 
+    padding: 0 40px;   
+    text-align: center; 
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.intro {
+    padding: 60px 40px; 
+    text-align: center;
+    max-width: 800px; 
+    margin: 0 auto;   
+}
+
+.two-column-text {
+    column-count: 2;
+    column-gap: 40px; 
+    text-align: left; 
+}
+
+.two-column-text p {
+    margin-bottom: 15px;
+}
+
+
+/* --- CARDS & GALLERIES --- */
+
+.highlights {
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    padding: 60px 40px; 
+    background-color: var(--color-warm-white);
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px; 
+    width: 30%; 
+    text-align: center;
+    border: 2px solid var(--color-red-warm); 
+}
+
+.card h3 {
+    color: var(--color-blue-deep);
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.card a {
+    font-family: var(--font-headline); 
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-red-warm); 
+}
+
+.card a:hover {
+    text-decoration: underline; 
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+    max-width: 1000px; 
+    margin: 0 auto;   
+}
+
+.gallery-item {
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0; 
+}
+
+.gallery-item h3 {
+    color: var(--color-blue-deep);
+    padding: 20px 20px 0 20px; 
+}
+
+.gallery-item p {
+    font-size: 0.95rem;
+    padding: 0 20px 20px 20px; 
+    flex-grow: 1; 
+}
+
+
+/* --- PAGE-SPECIFIC STYLES --- */
+
+/* --- HOMEPAGE (INTRO & PROMO) --- */
+
+.intro h2 {
+    position: relative; 
+    display: inline-block; 
+    cursor: help; 
+    transition: color 0.3s ease;
+}
+
+.intro h2::after {
+    content: 'Bienvenidos a la Isla del Encanto'; 
+    display: none; 
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: 100%;       
+    margin-bottom: 5px; 
+    color: var(--color-red-warm); 
+    font-family: var(--font-body); 
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 400; 
+    white-space: nowrap; 
+}
+
+.intro h2:hover::after {
+    display: block;
+}
+
+.promo-banner {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/promo-pg.jpg); /* <-- This is the path from your file */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    padding: 100px 40px; 
+    text-align: center;
+    color: var(--color-white);
+}
+
+.promo-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.promo-banner p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/* --- CULTURE PAGE (MUSIC IMAGE) --- */
+
+.music-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- ABOUT PAGE (FAVORITES & FOOTER GALLERY) --- */
+
+#favorites-section {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../images/PR.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--color-white); 
+    border-radius: 8px; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#favorites-section h2,
+#favorites-section p {
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#favorites-section .section-intro {
+    margin-bottom: 30px; 
+}
+
+.footer-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    margin-top: 40px; 
+}
+
+.footer-gallery img {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+    opacity: 1; 
+}
